@@ -1,0 +1,672 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-Hans" data-default-color-scheme=light>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="black">
+  <meta name="description" content="前言
+这是我搭建的第二个Hexo博客了，第一次搭建是因为跟风，这次搭建是因为对博客园太失望了
+作为一个，热爱生活的计算机小白，总会想在哪里写些东西，一开始是CSDN，后来因为cnblog可以个性化，就搬家到了cnblog，用了一段时间之后，对自己进行了灵魂双问：
+
+            好看吗？还行….好用吗？一般….
+          ">
+  <meta name="author" content="橡">
+  <meta name="keywords" content="">
+  <meta name="description" content="前言 这是我搭建的第二个Hexo博客了，第一次搭建是因为跟风，这次搭建是因为对博客园太失望了 作为一个，热爱生活的计算机小白，总会想在哪里写些东西，一开始是CSDN，后来因为cnblog可以个性化，就搬家到了cnblog，用了一段时间之后，对自己进行了灵魂双问：              好看吗？还行….好用吗？一般….">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo搭建日记1-安装Hexo博客">
+<meta property="og:url" content="http://jjjime.github.io/2021/09/29/Hexo%E6%90%AD%E5%BB%BA%E6%97%A5%E8%AE%B01-%E5%AE%89%E8%A3%85Hexo%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:site_name" content="我是猫">
+<meta property="og:description" content="前言 这是我搭建的第二个Hexo博客了，第一次搭建是因为跟风，这次搭建是因为对博客园太失望了 作为一个，热爱生活的计算机小白，总会想在哪里写些东西，一开始是CSDN，后来因为cnblog可以个性化，就搬家到了cnblog，用了一段时间之后，对自己进行了灵魂双问：              好看吗？还行….好用吗？一般….">
+<meta property="og:locale">
+<meta property="og:image" content="https://i.loli.net/2021/09/29/ELaAWewdhVKiM9X.png">
+<meta property="og:image" content="https://i.loli.net/2021/09/29/46GhdwkxrD53aKX.png">
+<meta property="og:image" content="https://i.loli.net/2021/09/30/Yjk9sulQ7fPratc.png">
+<meta property="og:image" content="https://i.loli.net/2021/09/30/GCNgAzOErUW6qtd.png">
+<meta property="article:published_time" content="2021-09-29T13:59:30.000Z">
+<meta property="article:modified_time" content="2021-10-09T11:02:54.318Z">
+<meta property="article:author" content="橡">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://i.loli.net/2021/09/29/ELaAWewdhVKiM9X.png">
+  
+  <title>Hexo搭建日记1-安装Hexo博客 ｜ 我是猫</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      
+        
+          
+        
+        <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism.min.css" />
+      
+      
+        <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/line-numbers/prism-line-numbers.min.css" />
+      
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/scrollbar.css">
+<link rel="stylesheet" href="/css/indeximg-hover.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"jjjime.github.io","root":"/","version":"1.8.12","typing":{"enable":false,"typeSpeed":30,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 23vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>我是猫</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                Links
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" rel="noopener" href="http://110.40.191.51:5000/">
+                <i class="iconfont icon-apple-fill"></i>
+                桌面
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" false
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Hexo搭建日记1-安装Hexo博客">
+              
+                Hexo搭建日记1-安装Hexo博客
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-author" aria-hidden="true"></i>
+      橡
+    </span>
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-09-29 21:59" pubdate>
+        September 29, 2021 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.4k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      4 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Hexo搭建日记1-安装Hexo博客</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：3 days ago
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><hr>
+<p>这是我搭建的第二个Hexo博客了，第一次搭建是因为跟风，这次搭建是因为对博客园太失望了</p>
+<p>作为一个，热爱生活的计算机小白，总会想在哪里写些东西，一开始是CSDN，后来因为cnblog可以个性化，就搬家到了cnblog，用了一段时间之后，对自己进行了灵魂双问：</p>
+<div class="note note-success">
+            <p>好看吗？还行….好用吗？一般….</p>
+          </div>
+
+<span id="more"></span>
+
+<p>虽然我也有一个搭建在Hexo上的博客，但是安装了个<a target="_blank" rel="noopener" href="https://dev.zzoman.com/">主题</a>之后也没有进行优化，大概长这个样子（忽略那些博文：我上传了进行测试的）</p>
+<p><img src="https://i.loli.net/2021/09/29/ELaAWewdhVKiM9X.png" srcset="/img/loading.gif" lazyload></p>
+<p>之前我在cnblog写博客的时候，写到了【科学上网】，然后发布失败，这也倒无所谓，我不写就行了，遵守规矩，但是但是！！终于终于！！有一次有一次！！发生了一件让我受不了的事，那就是：博客优化！</p>
+<p>大部分服务器进行博客优化都是几分钟，博客园用了几天，这期间无法上传博客，许多博客打不开，同时还删除了一部分博客，其中包括我的数篇，如果有违规其实删掉了我没意见，但是他居然给我删掉了几篇我的Markdown笔记….我十分信任cnblog，本地都没有进行备份…而且那都是用到之后随手打开博客就能找到的东西，我受不了了….所以，就开始了Hexo之路。</p>
+<p>在正文开始之前，推荐一个人美心善技术牛写的还详细的小姐姐的博客：<a target="_blank" rel="noopener" href="https://www.jmyblog.top/">【点这里就行勒】</a></p>
+<hr>
+<br>
+
+<br>
+
+
+
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p><font size = 2>以下命令皆省略<code>sudo</code>如果权限不足请自行加上，如果每次都加嫌麻烦请先运行<code>sudo su</code></font></p>
+<hr>
+<br>
+
+
+
+<h3 id="本地安装hexo博客"><a href="#本地安装hexo博客" class="headerlink" title="本地安装hexo博客"></a>本地安装hexo博客</h3><p>Hexo的安装很简单，只要安装<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/">【Nodejs】</a>之后，一切用指令就能完成，首先运行以下命令，安装Hexo</p>
+<div class="note note-default">
+            <p>npm install hexo-cli -g</p>
+          </div>
+
+<p>创建一个空白文件夹，使用命令执行以下命令（二选一）</p>
+<div class="note note-default">
+            <p>hexo init</p><p>sudo hexo init filename</p><p>两者的区别在于，第一条命令直接将您的空白文件夹作为本地仓库进行clone，第二条命令会在您创建的文件夹下创建一个名为filename的文件夹后在此文件夹下clone，文件夹名称可以自行更改。</p>
+          </div>
+
+<p>这样一来hexo文件就创建好了，然后运行以下以下两条命令，检查下依赖，防止部署后期出现问题：</p>
+<div class="note note-default">
+            <p>​    npm install</p><p>​    npm update</p>
+          </div>
+
+<p>这样一来hexo博客便<span class="label label-success">成功创建</span>，可以在此文件夹下执行 <code>hexo s</code> 启动博客，并在浏览器中输入<code>localhost:4000</code>查看运行状态，在贴图之前，先给四条hexo常用命令：</p>
+<div class="note note-warning">
+            <p>hexo clean 清理本地生成的文件</p><p>hexo g 生成本地文件</p><p>hexo s 本地运行hexo</p><p>hexo d 上传到github仓库（ 到这里还没配置github仓库，这条命令没有用哦～ ）</p>
+          </div>
+
+<p>看看此时的运行状态：</p>
+<p><img src="https://i.loli.net/2021/09/29/46GhdwkxrD53aKX.png" srcset="/img/loading.gif" lazyload></p>
+<br>
+
+
+
+<h3 id="上传至Github"><a href="#上传至Github" class="headerlink" title="上传至Github"></a>上传至Github</h3><hr>
+<p>界面确实有点简单哈～还有点丑丑的，所以才会需要配置博客主题，但是在那之前，我们先在Github上配置一下博客～</p>
+<p>首先先在自己的<a target="_blank" rel="noopener" href="https://github.com/new">Github</a>上创建自己的同名仓库，明明格式为  <code>用户名.github.io</code> ，如下图所示（因为我已经创建过了所以是红色的）：</p>
+<p><img src="https://i.loli.net/2021/09/30/Yjk9sulQ7fPratc.png" srcset="/img/loading.gif" lazyload></p>
+<p>同名仓库创建完成之后，我们就要关联一下本地仓库和Github云端仓库了，为了避免文章太乱，我把它放在了<a href="https://jjjime.github.io/2021/09/30/Github%E8%BF%9E%E6%8E%A5%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/">另一篇博客里</a>，按照这里的博客内容操作好了以后，在你的Blog的根目录下执行以下命令：</p>
+<div class="note note-default">
+            <p>sudo npm install hexo-deployer-git –save</p>
+          </div>
+
+
+
+<p>到这里就正式成功了，下面的博文都是优化<a target="_blank" rel="noopener" href="https://github.com/next-theme/hexo-theme-next">NexT</a>主题，<a target="_blank" rel="noopener" href="https://github.com/next-theme/hexo-theme-next">NexT</a>有三种风格，如下：</p>
+<p><img src="https://i.loli.net/2021/09/30/GCNgAzOErUW6qtd.png" srcset="/img/loading.gif" lazyload></p>
+<p>通过配置theme/next/_config.yml文件可以在三种之间进行切换，如果NexT不是你的菜的话，可以<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/bcdbe7347c8d">【点击这里】</a>看一下别人的推荐或者<a target="_blank" rel="noopener" href="https://hexo.io/themes/">【点击这里】</a>去在人海中挑选你心仪的对象。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%BB%B4%E6%8A%A4%E5%B0%8F%E7%A0%B4%E7%AB%99/">维护小破站</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Hexo/">Hexo</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/09/30/%E7%AD%BE%E7%AD%BE/-Hexo%E8%BF%9E%E6%8E%A5%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Hexo连接本地仓库</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/09/29/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E6%97%A2%E7%84%B6%E7%95%99%E4%B8%8D%E4%BD%8F%EF%BC%8C%E9%82%A3%E5%B0%B1%E5%90%84%E8%87%AA%E5%AE%89%E5%A5%BD%E5%90%A7%EF%BD%9E/">
+                        <span class="hidden-mobile">既然分手了，那就各自安好吧～</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="lv-container" data-id="city" data-uid="MTAyMC81NDM5Mi8zMDg2Mw==">
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#lv-container', function() {
+        Fluid.utils.createScript('https://cdn-city.livere.com/js/embed.dist.js');
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            &nbsp✨&nbsp 
+            <span id="busuanzi_value_site_pv"></span>
+             times
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            &nbsp💫&nbsp 
+            <span id="busuanzi_value_site_uv"></span>
+             nums
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+    
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          load: ['ui/lazy']
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"default"});
+    }
+  </script>
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
